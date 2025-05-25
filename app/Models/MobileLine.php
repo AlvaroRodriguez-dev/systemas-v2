@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Equipment extends Model
+class MobileLine extends Model
 {
     use HasFactory;
+    protected $fillable = ['phone_number', 'operator', 'state'];
 
-    protected $fillable = ['type', 'manufacturer', 'model', 'serie_number', 'ram', 'store', 'state', 'puchase_date', 'note'];
-/*
+    /*
     public function movimientos()
     {
         return $this->hasMany(Movimiento::class);
-    } */
+    }*/
 }

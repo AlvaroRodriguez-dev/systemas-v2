@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\EquipmentController;
+use App\Http\Controllers\StaffController;
+use App\Http\Controllers\MobileLineController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('equipments', EquipmentController::class);
+Route::resource('mobileLines', MobileLineController::class);
+Route::resource('staff', StaffController::class);
